@@ -1,5 +1,8 @@
 # SysLogger
 
+[![Build Status](https://travis-ci.org/seanmonstar/syslogger.png?branch=master)](https://travis-ci.org/seanmonstar/syslogger)
+[![NPM version](https://badge.fury.io/js/syslogger.png)](http://badge.fury.io/js/syslogger)
+
 A sane, simple API to blast things at syslog.
 
 ```js
