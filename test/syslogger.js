@@ -20,10 +20,11 @@ module.exports = {
 
         server.once('message', function(buf) {
           var str = buf.toString();
-          assert(/^<\d+>/.test(str));
-          assert(/<\d+> \w{3} \d{2} \d{2}:\d{2}:\d{2}/.test(str));
-          assert(/SysLogger\$\d+/.test(str));
-          assert(new RegExp("[" + process.pid + "]:").test(str));
+
+          assert(/^<\d+>/.test(str), str);
+          assert(/<\d+> \w{3} \d{2} \d{2}:\d{2}:\d{2}/.test(str), str);
+          assert(/SysLogger\$\d+/.test(str), str);
+          assert(new RegExp("[" + process.pid + "]:").test(str), str);
           assert(/foo$/.test(str));
           done();
         });
