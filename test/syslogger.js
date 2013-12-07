@@ -10,7 +10,8 @@ module.exports = {
   'SysLogger': {
     'beforeEach': function(done) {
       server = dgram.createSocket('udp4');
-      server.bind(0, done);
+      server.once('listening', done);
+      server.bind(0);
     },
     'log': {
       'should output formatted message': function(done) {
