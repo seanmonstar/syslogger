@@ -1,6 +1,6 @@
 {
   "name": "syslogger",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A sane syslog API",
   "main": "./lib/syslogger.js",
   "directories": {
