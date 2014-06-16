@@ -10,7 +10,7 @@
     "test": "mocha --check-leaks --ui exports"
   },
   "dependencies": {
-    "glossy": "^0.1.5"
+    "glossy": "0.1.x"
   },
   "devDependencies": {
     "mocha": "1.x"
