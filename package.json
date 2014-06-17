@@ -7,8 +7,12 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --check-leaks --ui exports --reporter spec"
+    "test": "mocha --check-leaks --ui exports"
   },
+  "files": [
+    "LICENSE",
+    "lib"
+  ],
   "dependencies": {
     "glossy": "0.1.x"
   },
