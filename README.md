@@ -12,7 +12,7 @@ var logger = new SysLogger({
   facility: 'user',
   address: '127.0.0.1',
   port: 514,
-  type: 'BSD' // BSD/RFC 3164 or RFC 5424 https://github.com/squeeks/glossy#producing
+  type: 'BSD' // 'BSD', 'RFC3164' or 'RFC5424'
 });
 
 logger.log(severity, message);
@@ -22,4 +22,6 @@ logger.warn(message);
 logger.emerg(message);
 ```
 
+To choose between different formats, pass a value as the `type` option.
+See https://github.com/squeeks/glossy#producing about the formats.
 

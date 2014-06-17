@@ -1,3 +1,7 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 const assert = require('assert');
 const dgram = require('dgram');
 
@@ -22,10 +26,10 @@ module.exports = {
         server.once('message', function(buf) {
           var str = buf.toString();
 
-          assert.ok(/^<\d+>\w{3} \d{2} \d{2}:\d{2}:\d{2}/.test(str), str);
-          assert.ok(/SysLogger\$\d+/.test(str), str);
-          assert.ok(new RegExp("[" + process.pid + "]:").test(str), str);
-          assert.ok(/foo$/.test(str));
+          assert(/^<\d+>\w{3} \d{2} \d{2}:\d{2}:\d{2}/.test(str), str);
+          assert(/SysLogger\$\d+/.test(str), str);
+          assert(new RegExp("\\[" + process.pid + "\\]:").test(str), str);
+          assert(/foo$/.test(str));
           done();
         });
 
