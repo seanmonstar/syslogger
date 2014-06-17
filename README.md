@@ -11,7 +11,8 @@ var logger = new SysLogger({
   name: 'myApp',
   facility: 'user',
   address: '127.0.0.1',
-  port: 514
+  port: 514,
+  type: 'BSD' // BSD/RFC 3164 or RFC 5424 https://github.com/squeeks/glossy#producing
 });
 
 logger.log(severity, message);
@@ -20,3 +21,5 @@ logger.notice(message);
 logger.warn(message);
 logger.emerg(message);
 ```
+
+
