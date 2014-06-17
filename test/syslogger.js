@@ -22,11 +22,10 @@ module.exports = {
         server.once('message', function(buf) {
           var str = buf.toString();
 
-          assert(/^<\d+>/.test(str), str);
-          assert(/<\d+> \w{3} \d{2} \d{2}:\d{2}:\d{2}/.test(str), str);
-          assert(/SysLogger\$\d+/.test(str), str);
-          assert(new RegExp("[" + process.pid + "]:").test(str), str);
-          assert(/foo$/.test(str));
+          assert.ok(/^<\d+>\w{3} \d{2} \d{2}:\d{2}:\d{2}/.test(str), str);
+          assert.ok(/SysLogger\$\d+/.test(str), str);
+          assert.ok(new RegExp("[" + process.pid + "]:").test(str), str);
+          assert.ok(/foo$/.test(str));
           done();
         });
 

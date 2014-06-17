@@ -7,16 +7,18 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --check-leaks --ui exports"
+    "test": "mocha --check-leaks --ui exports --reporter spec"
   },
   "dependencies": {
-    "strftime": "0.7.0"
+    "glossy": "0.1.x"
   },
   "devDependencies": {
     "mocha": "1.x"
   },
   "readmeFilename": "README.md",
-  "bugs": "https://github.com/seanmonstar/syslogger/issues",
+  "bugs": {
+    "url": "https://github.com/seanmonstar/syslogger/issues"
+  },
   "homepage": "https://github.com/seanmonstar/syslogger",
   "repository": {
     "type": "git",
@@ -26,8 +28,5 @@
     "syslog"
   ],
   "author": "Sean McArthur <sean.monstar@gmail.com> (http://seanmonstar.com)",
-  "license": "MPLv2.0",
-  "bugs": {
-    "url": "https://github.com/seanmonstar/syslogger/issues"
-  }
+  "license": "MPLv2.0"
 }
