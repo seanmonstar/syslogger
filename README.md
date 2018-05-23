@@ -25,3 +25,11 @@ logger.emerg(message);
 To choose between different formats, pass a value as the `type` option.
 See https://github.com/squeeks/glossy#producing about the formats.
 
+Note: you need to ensure syslog is listening on UDP port 514 for this example to work. On Ubuntu, for example, you would need to edit /etc/rsyslog.conf, add/uncomment the following lines, and ensure rsyslog is restarted:
+
+```
+# provides UDP syslog reception
+$ModLoad imudp
+$UDPServerAddress 127.0.0.1
+$UDPServerRun 514
+```
